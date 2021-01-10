@@ -6,19 +6,16 @@
 
 // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
-const sumSquareDifference = () => {
-    let squaredNumbers = []
-    let naturalNumbers = []
 
-    for (i = 1; i <= 100; i++) {
-        naturalNumbers.push(i)
-        squaredNumbers.push(i ** 2)
-    }
+let squaredNumbers = []
+let naturalNumbers = []
 
-    const sumOfSquare = squaredNumbers.reduce((acc, current) => acc + current)
-    const squareOfSum = (naturalNumbers.reduce((acc, current) => acc + current)) ** 2
-
-    console.log(squareOfSum - sumOfSquare)
+for (i = 1; i <= 100; i++) {
+    naturalNumbers.push(i)
+    squaredNumbers.push(i ** 2)
 }
 
-sumSquareDifference()
+const sumOfSquare = squaredNumbers.reduce((acc, current) => acc + current)
+const squareOfSum = (naturalNumbers.reduce((acc, current) => acc + current)) ** 2
+
+console.log(squareOfSum - sumOfSquare)
